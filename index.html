@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter Website using html, css & JavaScript</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AISSMS College</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <!-- box icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <main>
-        <section id="hero">
-            <b><b>Welcome to AISSMS College</b></b>
-            <p>Your journey to excellence begins here.</p>
-            <a href="#admissions" class="cta-button">Apply Now</a>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Information about the college...</p>
-        </section>
-
-        <section id="courses">
-            <h2>Our Courses</h2>
-            <div class="course">
-                <h3>Course Title</h3>
-                <p>Description of the course...</p>
+  </head>
+  <body>
+    <div class="container">
+        <div class="temperature-converter">
+            <div class="mobile">
+                <p class="time">9.41 AM</p>
+                <div>
+                    <i class='bx bx-signal-4'></i>
+                    <i class='bx bx-wifi' ></i>
+                    <i class='bx bxs-battery' ></i>
+                </div>
             </div>
-            <!-- Repeat the above structure for other courses -->
-        </section>
 
-        <section id="admissions">
-            <h2>Admissions</h2>
-            <p>Admission information...</p>
-        </section>
+            <h1 class="title">Temperature Converter</h1>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Contact information...</p>
-        </section>
-    </main>
+            <div class="result">
+              <span class="result-heading">Result (Celsius)</span>
+              <h2 class="celsius-value" id="celsius"></h2>
+            </div>
 
-    <footer>
-        <p>&copy; 2023 AISSMS College</p>
-    </footer>
-</body>
+            <!-- input field -->
+            <div class="degree-type">
+                <!-- for degrees -->
+              <div class="degree-field">
+                <label for="degree">Degrees</label>
+                <input type="number" name="degree" id="degree" />
+              </div>
 
+              <!-- for option selection -->
+              <div class="temp-field">
+                <label for="temp-type">Type</label>
+                <select name="temperatures" id="temp-type" autocomplete="on">
+                  <option id="fahrenheit" value="fahrenheit">Fahrenheit</option>
+                  <option id="kelvin" value="kelvin">Kelvin</option>
+                </select>
+              </div>
+            </div>
+            <button id="convert-btn">Convert</button>
+
+        </div>
+      </div>
+    <!-- script tags -->
+    <script src="j.js"></script>
+  </body>
 </html>
